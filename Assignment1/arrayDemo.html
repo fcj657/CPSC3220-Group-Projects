@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 100px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array Demo</h1>
+    <form action="arrayDemo.php" method="post">
+        <label for="rows">Number of Rows:</label>
+        <input type="number" id="rows" name="rows" required><br>
+
+        <label for="columns">Number of Columns:</label>
+        <input type="number" id="columns" name="columns" required><br>
+
+        <label for="minValue">Minimum Random Value:</label>
+        <input type="number" id="minValue" name="minValue" required><br>
+
+        <label for="maxValue">Maximum Random Value:</label>
+        <input type="number" id="maxValue" name="maxValue" required><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
