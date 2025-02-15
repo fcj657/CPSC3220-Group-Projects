@@ -27,7 +27,7 @@ function readDomains($filename) {
 }
 
 // Function to read CSV file into an array
-function readCSV($filename) {
+/*function readCSV($filename) {
     $rows = [];
     if (($handle = fopen($filename, "r")) !== FALSE) {
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
@@ -36,6 +36,20 @@ function readCSV($filename) {
         fclose($handle);
     }
     return $rows;
+}*/
+
+// Function to read CSV file into an array
+function readCSV($filename) {
+    // code that was here $rows = [];
+    $flatArray = [];
+    if (($handle = fopen($filename, "r")) !== FALSE) {
+        while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+            // code that was here $rows[] = array_map('trim', $data); // Read all columns
+            $flatArray = array_merge($flatArray, array_map('trim', $data));
+        }
+        fclose($handle);
+    }
+    return $flatArray;
 }
 
 // Data initialization
